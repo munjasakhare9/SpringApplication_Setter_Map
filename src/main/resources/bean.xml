@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="s1" class="com.demo.model.Student">
+		<property name="details">
+			<map>
+				<entry key="colors">
+					<list>
+						<value>white</value>
+						<value>black</value>
+						<value>green</value>
+					</list>
+				</entry>
+
+				<entry key="foods">
+					<list>
+						<value>veg</value>
+						<value>non-veg</value>
+					</list>
+				</entry>
+
+				<entry key="students">
+					<list>
+						<ref bean="a1"/>
+						<ref bean="a2"/>
+						<ref bean="a3"/>
+						<ref bean="a3"/>
+					</list>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="a1" class="com.demo.model.Student">
+		<property name="id" value="10"></property>
+	</bean>
+
+	<bean id="a2" class="com.demo.model.Student">
+		<property name="id" value="20"></property>
+	</bean>
+
+	<bean id="a3" class="com.demo.model.Student">
+		<property name="id" value="30"></property>
+	</bean>
+
+</beans>
